@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Assignment1_ToDoList</string>
+    <string-array name="options">
+        <item>All</item>
+        <item>Done</item>
+    </string-array>
+</resources>

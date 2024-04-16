@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B5A9CC"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".TaskActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="To Do Tasks"
+        android:textAlignment="center"
+        android:textColor="#F8F5F5"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_above="@id/button_click"
+        android:orientation="vertical"
+        >
+
+        <ListView
+            android:id="@+id/lview_tasks"
+            android:layout_width="match_parent"
+            android:layout_height="578dp"
+            android:divider="@color/white"
+            android:dividerHeight="2dp"
+            android:listSelector="@color/purple_200" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="92dp"
+            android:background="#E0DAEC"
+            tools:ignore="NotSibling" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/button_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp">
+
+
+        <EditText
+            android:id="@+id/edittxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:hint="Text Name"
+            android:inputType="text"
+            android:layout_weight="1"
+
+            />
+
+        <Button
+            android:id="@+id/btnadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="enterButton"
+
+            android:background="#E0DAEC"
+            android:text="Add Task"
+
+            app:layout_constraintStart_toEndOf="@+id/edittxt" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
